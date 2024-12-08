@@ -1,0 +1,92 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.background {
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Add shadow for better readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-panel {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.nav-panel li {
+    margin: 20px 0;
+}
+
+.nav-panel a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-panel a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-shadow: none;
+}
+
+.register-btn:hover {
+    background-color: #ff3333;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.content p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}

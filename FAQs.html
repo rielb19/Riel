@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Anywhere Fitness</title>
+    <link rel="stylesheet" href="FAQs.css">
+</head>
+<body>
+    <div class="background">
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="videogallery.html">Video Gallery</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Content Section -->
+        <header class="header">
+            <button class="register-btn" onclick="location.href='register.html'">Register Now</button>
+        </header>
+        <main class="content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Here you'll find answers to some of the most common questions about Anywhere Fitness.</p>
+
+            <div class="faq-section">
+                <h2>General Questions</h2>
+                <div class="faq-item">
+                    <h3>What is Anywhere Fitness?</h3>
+                    <p>Anywhere Fitness is a virtual fitness platform that offers workouts, meditation guides, schedules, and much more to help you stay fit wherever you are.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I register?</h3>
+                    <p>Click on the "Register Now" button at the top of the page, fill out the form, and get started with our services.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Workouts</h2>
+                <div class="faq-item">
+                    <h3>What types of workouts are available?</h3>
+                    <p>We offer a variety of workouts, including strength training, cardio, yoga, and flexibility exercises. You can explore them on the <a href="work.html">Workouts</a> page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are the workouts beginner-friendly?</h3>
+                    <p>Yes, we have workouts designed for all fitness levels, from beginners to advanced athletes.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Contact and Support</h2>
+                <div class="faq-item">
+                    <h3>How can I contact support?</h3>
+                    <p>You can reach out to us on the <a href="contact.html">Contact</a> page. We're here to help!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a mobile app?</h3>
+                    <p>Currently, Anywhere Fitness is available through the website. A mobile app is under development and will be launched soon.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="main.html">Home</a>
+                <a href="home.html">Redirectory</a>
+                <a href="work.html">Workouts</a>
+                <a href="sched.html">Schedule</a>
+                <a href="meditation.html">Meditation</a>
+                <a href="videogallery.html">Video Gallery</a>
+                <a href="faq.html" class="active">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="FAQs.html">FAQs</a>
+            </div>
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        const navPanel = document.getElementById('navPanel');
+        const navToggle = document.getElementById('navToggle');
+
+        // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+    </script>
+</body>
+</html>

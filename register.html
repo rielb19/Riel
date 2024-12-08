@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Anywhere Fitness</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Left Navigation Panel -->
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="videogallery.html" class="active">Video Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Toggle Icon -->
+        <div class="nav-toggle" id="navToggle">
+            <span>&#9664;</span>
+        </div>
+
+        <!-- Main Content Section -->
+        <header class="header">
+            <button class="register-btn" onclick="location.href='register.html'">Register Now</button>
+        </header>
+
+        <main class="content">
+            <div class="register-form-container">
+                <h1>Register</h1>
+                <form action="" method="POST" id="register-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workout-background">Rate your background of working out (1: Beginner, 6: Expert):</label>
+                        <div class="rating">
+                            <label><input type="radio" name="workout-background" value="1"> 1</label>
+                            <label><input type="radio" name="workout-background" value="2"> 2</label>
+                            <label><input type="radio" name="workout-background" value="3"> 3</label>
+                            <label><input type="radio" name="workout-background" value="4"> 4</label>
+                            <label><input type="radio" name="workout-background" value="5"> 5</label>
+                            <label><input type="radio" name="workout-background" value="6"> 6</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workout-frequency">How many times a week do you plan to work out?</label>
+                        <select name="workout-frequency" id="workout-frequency">
+                            <option value="2">Twice a week</option>
+                            <option value="3">Thrice a week</option>
+                            <option value="5">Five times a week</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bmi">Enter your BMI (Weight in kg / Height in m²):</label>
+                        <input type="number" id="weight" name="weight" placeholder="Weight in kg" required>
+                        <input type="number" id="height" name="height" placeholder="Height in meters" required>
+                        <p>Note: BMI = Weight (kg) / Height² (m²)</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calculated-bmi">Your BMI is:</label>
+                        <input type="text" id="calculated-bmi" name="calculated-bmi" readonly>
+                    </div>
+
+                    <button type="submit" class="submit-btn" onclick="location.href='home.html'">Submit</button>
+                </form>
+            </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="main.html">Home</a>
+                <a href="home.html">Redirectory</a>
+                <a href="work.html">Workouts</a>
+                <a href="sched.html">Schedule</a>
+                <a href="meditation.html">Meditation</a>
+                <a href="contact.html">Contact</a>
+                <a href="VideoGallery.html">Video Gallery</a>
+            </div>
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+    </div>
+
+  <script>
+        const navPanel = document.getElementById('navPanel');
+        const navToggle = document.getElementById('navToggle');
+
+        // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+        // Function to calculate BMI and display it
+        document.getElementById('register-form').addEventListener('input', function () {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+            if (weight && height) {
+                const bmi = weight / (height * height);
+                document.getElementById('calculated-bmi').value = bmi.toFixed(2);
+            }
+        });
+    </script>
+</body>
+</html>

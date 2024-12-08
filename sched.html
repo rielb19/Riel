@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Anywhere Fitness</title>
+    <link rel="stylesheet" href="sched.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Left Navigation Panel -->
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html" class="active">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="videogallery.html" class="active">Video Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Toggle Icon -->
+        <div class="nav-toggle" id="navToggle">
+            <span>&#9664;</span>
+        </div>
+
+        <!-- Main Content Section -->
+        <header class="header">
+            <button class="register-btn" onclick="location.href='register.html'">Register Now</button>
+        </header>
+
+        <main class="content">
+            <div class="schedule-container">
+                <h1>Workout Schedule</h1>
+                <p>Choose your workout schedule based on your fitness goals and availability.</p>
+
+                <!-- Schedule Table -->
+                <section class="schedule-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Twice a Week</th>
+                                <th colspan="2">Thrice a Week</th>
+                                <th colspan="2">Five Times a Week</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Monday</b></td>
+                                <td>Morning Yoga</td>
+                                <td><b>Monday</b></td>
+                                <td>Cardio Blast</td>
+                                <td><b>Monday</b></td>
+                                <td>Morning Yoga</td>
+                            </tr>
+                            <tr>
+                                <td><b>Thursday</b></td>
+                                <td>Strength Training</td>
+                                <td><b>Wednesday</b></td>
+                                <td>Morning Yoga</td>
+                                <td><b>Tuesday</b></td>
+                                <td>Cardio Blast</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><b>Friday</b></td>
+                                <td>Strength Training</td>
+                                <td><b>Wednesday</b></td>
+                                <td>Strength Training</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>Thursday</b></td>
+                                <td>Cardio Blast</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>Friday</b></td>
+                                <td>Stretching Routine</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="main.html">Home</a>
+                <a href="home.html">Redirectory</a>
+                <a href="work.html">Workouts</a>
+                <a href="sched.html">Schedule</a>
+                <a href="meditation.html">Meditation</a>
+                <a href="contact.html">Contact</a>
+                <a href="VideoGallery.html">Video Gallery</a>
+            </div>
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+        const navPanel = document.getElementById('navPanel');
+        const navToggle = document.getElementById('navToggle');
+
+        // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+    </script>
+</body>
+</html>

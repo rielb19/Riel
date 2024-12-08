@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - Anywhere Fitness</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="background">
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <header class="header">
+            <button class="register-btn" onclick="location.href='register.html'">Register Now</button>
+        </header>
+        <main class="content">
+            <h1>Workouts</h1>
+            <p>Explore our extensive library of workout routines. Tailored for every fitness level and goal.</p>
+            <div class="image-grid">
+                <div class="image-frame"></div>
+                <div class="image-frame"></div>
+                <div class="image-frame"></div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+    </script>
+</body>
+</html>

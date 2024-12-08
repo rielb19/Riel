@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery - Anywhere Fitness</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Left Navigation Panel -->
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="videogallery.html" class="active">Video Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+
+            </ul>
+        </div>  
+
+        <!-- Navigation Toggle Icon -->
+        <div class="nav-toggle" id="navToggle">
+            <span>&#9664;</span>
+        </div>
+
+        <!-- Main Content Section -->
+        <main class="content">
+            <div class="gallery-container">
+                <h1>Video Gallery</h1>
+                <p>Explore our collection of videos to enhance your fitness journey.</p>
+
+                <!-- Video Grid -->
+                <div class="video-grid">
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/VWj8ZxCxrYk?si=_mFRDisiI9bJAGmT1" frameborder="0" allowfullscreen></iframe>
+                        <p>Cardio Workout</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/H1F-UfC8Mb8?si=rgwN2L3pcRd4sxDZ" frameborder="0" allowfullscreen></iframe>
+                        <p>Strength Training</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/T41mYCmtWls?si=9GKDSanifG_Dah71" frameborder="0" allowfullscreen></iframe>
+                        <p>Yoga for Beginners</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/75pA0MaLvy0?si=SzUjqe-1SzAPvnWr" frameborder="0" allowfullscreen></iframe>
+                        <p>Stretching Routine</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/cbKkB3POqaY?si=i6jsSvMEYTjwxvlY" frameborder="0" allowfullscreen></iframe>
+                        <p>High-Intensity Interval Training</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/watch?v=gfzC9XMEypg" frameborder="0" allowfullscreen></iframe>
+                        <p>Advance Cardio</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/u20cgW0MmmM?si=3ePPktKQcl6fviKY" frameborder="0" allowfullscreen></iframe>
+                        <p>Core Strengthening</p>
+                    </div>
+                    <div class="video-frame">
+                        <iframe src="https://youtu.be/gfzC9XMEypg?si=soBSXuyH72rl3HC8" frameborder="0" allowfullscreen></iframe>
+                        <p>Cool Down Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="main.html">Home</a>
+                <a href="home.html">Redirectory</a>
+                <a href="work.html">Workouts</a>
+                <a href="sched.html">Schedule</a>
+                <a href="meditation.html">Meditation</a>
+                <a href="VideoGallery.html">Video Gallery</a> 
+                <a href="contact.html">Contact</a>
+                
+            </div>
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
+        </footer>
+    </div>      
+    </div>
+
+    <script>
+        const navPanel = document.getElementById('navPanel');
+        const navToggle = document.getElementById('navToggle');
+
+        // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+    </script>
+</body>
+</html>

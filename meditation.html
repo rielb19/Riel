@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation - Anywhere Fitness</title>
+    <link rel="stylesheet" href="med.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Left Navigation Panel -->
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html">Schedule</a></li>
+                <li><a href="meditation.html" class="active">Meditation</a></li>
+                <li><a href="videogallery.html" class="active">Video Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Toggle Icon -->
+        <div class="nav-toggle" id="navToggle">
+            <span>&#9664;</span>
+        </div>
+
+        <!-- Main Content Section -->
+        <header class="header">
+            <button class="register-btn" onclick="location.href='register.html'">Register Now</button>
+        </header>
+
+        <main class="content">
+            <div class="meditation-container">
+                <h1>Steps to Meditate</h1>
+                <p>Follow these simple steps to start meditating and achieve mindfulness.</p>
+
+                <!-- Meditation Steps Grid -->
+                <section class="meditation-steps">
+                    <div class="meditation-step">
+                        <img src="med2.png" alt="Quiet Spot" class="meditation-img">
+                        <h2>Step 1: Find a Quiet Spot</h2>
+                        <p>Choose a calm and serene location free from distractions where you can sit comfortably.</p>
+                    </div>
+
+                    <div class="meditation-step">
+                        <br>
+                        <br>
+                        <br>
+                        <br>    
+                        <img src="med1.png" alt="Sitting Comfortably" class="meditation-img">
+                        <h2>Step 2: Sit Comfortably</h2>
+                        <p>Sit with your back straight, hands on your lap, and feet flat on the ground or cross-legged.</p>
+                    </div>
+
+                    <div class="meditation-step">
+                        <br>
+                        <br>
+                        <img src="med3.png" alt="Focus on Breathing" class="meditation-img">
+                        <h2>Step 3: Focus on Your Breathing</h2>
+                        <p>Close your eyes and take deep, slow breaths. Inhale through your nose and exhale through your mouth.</p>
+                    </div>
+
+                    <div class="meditation-step">
+                        <img src="med4.png" alt="Clear Mind" class="meditation-img">
+                        <h2>Step 4: Clear Your Mind</h2>
+                        <p>Let go of thoughts and focus on the present moment. If your mind wanders, gently bring it back to your breathing.</p>
+                    </div>
+
+                    <div class="meditation-step">
+                        <img src="med5.png" alt="End Gradually" class="meditation-img">
+                        <h2>Step 5: End Gradually</h2>
+                        <p>When you're ready, open your eyes slowly and take a moment to absorb the calmness before resuming your day.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="main.html">Home</a>
+                <a href="home.html">Redirectory</a>
+                <a href="work.html">Workouts</a>
+                <a href="sched.html">Schedule</a>
+                <a href="meditation.html">Meditation</a>
+                <a href="contact.html">Contact</a>
+                <a href="VideoGallery.html">Video Gallery</a>
+            </div>
+            <p>Copyright &copy; 2024. All Rights Reserved.</p>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+      // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+    </script>
+</body>
+</html>

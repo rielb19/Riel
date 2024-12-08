@@ -1,0 +1,124 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.background {
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Login Container */
+.login-container {
+    background-color: rgba(150, 150, 150, 0.9); /* Semi-transparent grey */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.login-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+.login-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Error Message */
+.error-message {
+    font-size: 0.9rem;
+    color: #ff4d4d;
+    margin-top: 10px;
+}
+/* Footer Styling */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #4caf50;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3e8e41;
+}
+
+.footer p {
+    font-size: 0.9rem;  
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}

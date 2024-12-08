@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Anywhere Fitness</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Left Navigation Panel -->
+        <div class="nav-panel" id="navPanel">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="home.html">Redirectory</a></li>
+                <li><a href="work.html">Workouts</a></li>
+                <li><a href="sched.html">Schedule</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="videogallery.html" class="active">Video Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Navigation Toggle Icon -->
+        <div class="nav-toggle" id="navToggle">
+            <span>&#9664;</span>
+        </div>
+
+        <!-- Main Content Section -->
+        <main class="content">
+            <div class="contact-container">
+                <div class="contact-image">
+                    <img src="me.png" alt="Ralph Gabriel Brambles">
+                </div>
+                <div class="contact-info">
+                    <h1>Contact Us</h1>
+                    <p>
+                        Creator: Ralph Gabriel Brambles, a second-year IT-2A student at Colegio de San Juan de Letran. That has a strong passion for web design, CSS, and HTML. Designed specifically to cater to my style and taste.    
+                    </p>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/ralphgabrielDbrambles19/" target="_blank">Facebook</a></li>
+                        <li><a href="mailto:ralphgabriel.brambles@eletran.edu.ph">Email</a></li>
+                        <li><a href="https://www.instagram.com/rbrambles_/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+     // Hover Functionality
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = "translateX(0)";
+            } else if (event.clientX > 200) {
+                navPanel.style.transform = "translateX(-250px)";
+            }
+        });
+
+        // Toggle Functionality
+        navToggle.addEventListener('click', function () {
+            if (navPanel.style.transform === "translateX(0px)") {
+                navPanel.style.transform = "translateX(-250px)";
+            } else {
+                navPanel.style.transform = "translateX(0)";
+            }
+        });
+    </script>
+</body>
+</html>
